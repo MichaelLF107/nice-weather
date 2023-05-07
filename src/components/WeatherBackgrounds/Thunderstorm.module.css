@@ -1,0 +1,8 @@
+.thunderstorm {
+    min-width: 20vw;
+    background: linear-gradient(135deg, #3e596a, #6f98a8, #ffffff);
+    background-size: 120% 120%;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid #ededed;
+}

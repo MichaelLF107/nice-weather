@@ -1,0 +1,8 @@
+.clearSky {
+    min-width: 20vw;
+    background: linear-gradient(135deg, #2980b9, #6dd5fa, #ffffff);
+    background-size: 120% 120%;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    border: 1px solid #ededed;
+}
