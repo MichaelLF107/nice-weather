@@ -5,12 +5,12 @@ const MapQuestApeKey = process.env.NEXT_PUBLIC_MAP_QUEST_APIKEY
 
 const axiosWeater = axios.create({
     baseURL: 'https://api.openweathermap.org/data/2.5',
-    timeout: 1000
+    timeout: 3000
 })
 
 const axiosGeo = axios.create({
     baseURL: 'http://www.mapquestapi.com/geocoding/v1',
-    timeout: 1000
+    timeout: 3000
 })
 
 export const getWeatherByCoords = async (lat: number | null, lon: number | null) => {
@@ -19,11 +19,13 @@ export const getWeatherByCoords = async (lat: number | null, lon: number | null)
             lat,
             lon,
             units: 'metric',
-            cnt: 4,
             appid: OpenWeatherApiKey
         },
     })
-    return data
+    const filteredData = data.list.filter((item: any, index: number) => {
+        return index % 8 === 0
+    })
+    return {list: filteredData, city: data.city, cod: data.cod}
 }
 
 export const getCoordsByCity = async (city: string) => {
