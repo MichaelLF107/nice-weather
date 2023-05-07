@@ -50,9 +50,9 @@ export default function Home() {
         const weatherData = await getWeatherByCoords(position.coords.latitude, position.coords.longitude)
         setWeather(weatherData)
         setCity(weatherData.city.name)
-        setLoading(false)
       })
     }
+    setLoading(false)
   }, [])
 
   return (
@@ -82,7 +82,7 @@ export default function Home() {
         </div>
         {!loading ? (
           <div className={styles.list}>
-            {weather.list.map((item: any) => (
+            {weather.list && weather.list.map((item: any) => (
               <div key={item.dt} className={styles.item}>
                 <WeatherCard
                   main={item.main}
