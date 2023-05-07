@@ -1,5 +1,5 @@
 .fog {
-    min-width: 20vw;
+    min-width: 350px;
     background: linear-gradient(135deg, #686868, #9f9f9f, #a1a1a1);
     background-size: 120% 120%;
     padding: 1.5rem;

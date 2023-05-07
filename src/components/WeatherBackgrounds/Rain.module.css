@@ -1,5 +1,5 @@
 .rain {
-    min-width: 20vw;
+    min-width: 350px;
     background: linear-gradient(135deg, #0e1847, #0c0e27, #041013);
     background-size: 120% 120%;
     padding: 1.5rem;

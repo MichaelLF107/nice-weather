@@ -1,5 +1,5 @@
 .clouds {
-    min-width: 20vw;
+    min-width: 350px;
     background: linear-gradient(135deg, #3e596a, #6f98a8, #ffffff);
     background-size: 120% 120%;
     padding: 1.5rem;
