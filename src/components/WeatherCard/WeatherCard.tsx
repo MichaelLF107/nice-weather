@@ -30,7 +30,7 @@ type Props = {
         temp_min: number
     }
     name: string
-    rain: { '1h': number }
+    rain: { '3h': number }
     weather: weather[]
     wind: {
         deg: number
@@ -97,7 +97,7 @@ export default function WeatherCard(props: Props) {
                 </div>
                 <div className={styles.detail}>
                     <div className={styles.detailTitle}>Rain:</div>
-                    <div className={styles.detailValue}>{rain ? rain['1h'] : 0} mm</div>
+                    <div className={styles.detailValue}>{rain ? rain['3h'] : 0} mm</div>
                 </div>
             </div>
             <div className={styles.details}>
