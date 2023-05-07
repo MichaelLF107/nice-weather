@@ -14,11 +14,12 @@ const axiosGeo = axios.create({
 })
 
 export const getWeatherByCoords = async (lat: number | null, lon: number | null) => {
-    const { data } = await axiosWeater.get('/weather', {
+    const { data } = await axiosWeater.get('/forecast', {
         params: {
             lat,
             lon,
             units: 'metric',
+            cnt: 4,
             appid: OpenWeatherApiKey
         },
     })
