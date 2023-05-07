@@ -9,7 +9,7 @@ const axiosWeater = axios.create({
 })
 
 const axiosGeo = axios.create({
-    baseURL: 'http://www.mapquestapi.com/geocoding/v1',
+    baseURL: 'https://www.mapquestapi.com/geocoding/v1',
     timeout: 3000
 })
 
